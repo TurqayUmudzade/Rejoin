@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+<!--Breadcrumb-->
+<div>
+    <div class="bannerimg cover-image bg-background3" data-image-src="../assets/images/banners/banner2.jpg">
+        <div class="header-text mb-0">
+            <div class="container">
+                <div class="text-center text-white ">
+                    <h1 class="">Contact Us</h1>
+                    <ol class="breadcrumb text-center">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Contact</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Breadcrumb-->
+<!--Contact-->
+<div class="sptb bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="single-page">
+                <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+                    <div class="wrapper wrapper2">
+                        <form id="login" class="card-body" tabindex="500" method="post" action="@Url.Action("sendMessage")">
+                            <div class="mail mb-5">
+                                <input type="text" name="name">
+                                <label>Your Name</label>
+                            </div>
+                            <div class="email mb-5">
+                                <input type="email" name="email">
+                                <label>Email Address</label>
+                            </div>
+                            <div class="message mb-5">
+                                <textarea class="form-control" name="msg" rows="6"></textarea>
+                                <label>Message</label>
+                            </div>
+                            <button class="btn btn-primary btn-block">Send Message</button>
+                            <!--
+    <div class="submit mb-0">
+        <a class="btn btn-primary btn-block">Send Message</a>
+
+    </div>
+        -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Contact-->
