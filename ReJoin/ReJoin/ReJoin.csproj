@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,9 +141,19 @@
     <Compile Include="Migrations\202001051557342_contact1.Designer.cs">
       <DependentUpon>202001051557342_contact1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001052222086_User.cs" />
+    <Compile Include="Migrations\202001052222086_User.Designer.cs">
+      <DependentUpon>202001052222086_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001052243282_User1.cs" />
+    <Compile Include="Migrations\202001052243282_User1.Designer.cs">
+      <DependentUpon>202001052243282_User1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContactInfo.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -587,6 +598,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -608,6 +620,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001051557342_contact1.resx">
       <DependentUpon>202001051557342_contact1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001052222086_User.resx">
+      <DependentUpon>202001052222086_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001052243282_User1.resx">
+      <DependentUpon>202001052243282_User1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

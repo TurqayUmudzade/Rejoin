@@ -83,3 +83,5 @@ C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.pdb
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.contact.resources
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.csproj.GenerateResource.cache
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.contact1.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.User.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.User1.resources

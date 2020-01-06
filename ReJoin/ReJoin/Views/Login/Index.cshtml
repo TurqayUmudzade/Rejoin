@@ -1,0 +1,139 @@
+﻿@model LoginViewModel
+
+
+
+@{
+    ViewBag.Title = "Login/Register";
+}
+<!--Sliders Section-->
+<section>
+    <div class="bannerimg cover-image bg-background3" data-image-src="~/Public/assets/images/banners/banner2.jpg">
+        <div class="header-text mb-0">
+            <div class="container">
+                <div class="text-center text-white">
+                    <h1 class="">Login</h1>
+                    <ol class="breadcrumb text-center">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Login</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Sliders Section-->
+<!--Login-Section-->
+<section class="sptb">
+    <div class="container customerpage">
+        <div class="row">
+            <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-md-12 register-right">
+                        <ul class="nav nav-tabs nav-justified mb-5 p-2 border" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active m-1" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link m-1" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="single-page  w-100  p-0">
+                                    <div class="wrapper wrapper2">
+                                        <div class="p-4 mb-5">
+                                            <h4 class="text-left font-weight-semibold fs-16">Login With</h4>
+                                            <div class="btn-list d-sm-flex">
+                                                <a href="https://www.google.com/gmail/" class="btn btn-primary mb-sm-0"><i class="fab fa-google fa-1x mr-2"></i> Google</a>
+                                                <a href="https://twitter.com/" class="btn btn-secondary mb-sm-0"><i class="fab fa-twitter fa-1x mr-2"></i> Twitter</a>
+                                                <a href="https://www.facebook.com/" class="btn btn-info mb-0"><i class="fab fa-facebook-f fa-1x mr-2"></i> Facebook</a>
+                                            </div>
+                                        </div>
+                                        <hr class="divider">
+                                        <form id="login" class="card-body" tabindex="500" method="post" action="@Url.Action("login")" >
+                                            <h3 class="pb-2">Login</h3>
+                                            <div class="mail">
+                                                @Html.EditorFor(m=>m.Login.Email)
+                                                @Html.LabelFor(m=>m.Login.Email);
+                                                @Html.ValidationMessageFor(m=>m.Login.Email);
+                                            </div>
+                                            <div class="passwd">
+                                                @Html.EditorFor(m => m.Login.Password)
+                                                @Html.LabelFor(m => m.Login.Password);
+                                                @Html.ValidationMessageFor(m => m.Login.Password);
+                                            </div>
+                                            <button class="btn btn-primary btn-block">SUBMIT</button>
+                                            <p class="mb-2"><a href="forgot.html">Forgot Password</a></p>
+                                            <p class="text-dark mb-0">Don't have account?<a href="register.html" class="text-primary ml-1">Sign UP</a></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--REGISTER-->
+                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="single-page w-100  p-0">
+                                    <div class="wrapper wrapper2">
+                                        <div class="p-4 mb-5">
+                                            <h4 class="text-left font-weight-semibold fs-16">Register With</h4>
+                                            <div class="btn-list d-sm-flex">
+                                                <a href="https://www.google.com/gmail/" class="btn btn-primary mb-sm-0"><i class="fab fa-google fa-1x mr-2"></i> Google</a>
+                                                <a href="https://twitter.com/" class="btn btn-secondary mb-sm-0"><i class="fab fa-twitter fa-1x mr-2"></i> Twitter</a>
+                                                <a href="https://www.facebook.com/" class="btn btn-info mb-0"><i class="fab fa-facebook-f fa-1x mr-2"></i> Facebook</a>
+                                            </div>
+                                        </div>
+                                        <hr class="divider">
+                                        <form id="Register" class="card-body" tabindex="500" method="post" action="@Url.Action("register")">
+                                            <div class="name">
+                                                @Html.EditorFor(m=>m.Register.Fullname)
+                                                @Html.LabelFor(m=>m.Register.Fullname)
+                                                @Html.ValidationMessageFor(m=>m.Register.Fullname)
+                                            </div>
+                                            <div class="mail">
+                                                @Html.EditorFor(m => m.Register.Email)
+                                                @Html.LabelFor(m => m.Register.Email)
+                                                @Html.ValidationMessageFor(m => m.Register.Email)
+                                            </div>
+                                            <div class="passwd">
+                                                @Html.EditorFor(m => m.Register.Password)
+                                                @Html.LabelFor(m => m.Register.Password)
+                                                @Html.ValidationMessageFor(m => m.Register.Password)
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+                                            <p class="text-dark mb-0">Already have an account?<a href="login.html" class="text-primary ml-1">Sign In</a></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Login-Section-->
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-xl-6 col-md-12">
+                <div class="sub-newsletter">
+                    <h3 class="mb-2"><i class="fa fa-paper-plane-o mr-2"></i> Subscribe To Our Onlinesletter</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-xl-6 col-md-12">
+                <div class="input-group sub-input mt-1">
+                    <input type="text" class="form-control input-lg " placeholder="Enter your Email">
+                    <div class="input-group-append ">
+                        <button type="button" class="btn btn-primary btn-lg br-tr-3  br-br-3">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Onlinesletter-->
