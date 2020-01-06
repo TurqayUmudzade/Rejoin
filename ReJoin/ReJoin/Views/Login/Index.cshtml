@@ -62,6 +62,8 @@
                                                 @Html.EditorFor(m => m.Login.Password)
                                                 @Html.LabelFor(m => m.Login.Password);
                                                 @Html.ValidationMessageFor(m => m.Login.Password);
+                                                @Html.ValidationMessage("CustomError")
+
                                             </div>
                                             <button class="btn btn-primary btn-block">SUBMIT</button>
                                             <p class="mb-2"><a href="forgot.html">Forgot Password</a></p>

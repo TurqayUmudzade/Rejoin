@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿
+<!doctype html>
 <html lang="en" dir="ltr">
 
 <!-- Mirrored from www.spruko.com/demo/rejoin/html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 09:32:00 GMT -->
@@ -22,7 +23,7 @@
     <title>Rejoin</title>
 
     <!-- Bootstrap Css -->
-   
+
     <link href="~/Public/assets/plugins/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Dashboard Css -->
@@ -365,7 +366,22 @@
                                     <a href="register.html" class=""><i class="fa fa-user mr-1"></i> <span>Register</span></a>
                                 </li>
                                 <li>
-                                    <a href="login.html" class=""><i class="fa fa-sign-in mr-1"></i> <span>Login</span></a>
+                                    <a href="login.html" class="">
+
+
+                                        <i class="fa fa-sign-in mr-1"></i>
+                                        @if (Model != null)
+                                        {
+                                            <span>Log Out</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Log in</span>
+                                        }
+
+
+                                    </a>
+
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="" data-toggle="dropdown"><i class="fa fa-home mr-1"></i><span> My Dashboard</span></a>
@@ -470,7 +486,7 @@
                     <ul class="horizontalMenu-list">
                         <li>
                             <a @Html.ActionLink("Home", "Index", "Home")>Home </a>
-                           
+
                         </li>
                         <li><a href="about.html">About Us </a></li>
                         <li>

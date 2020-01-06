@@ -14,7 +14,7 @@ namespace ReJoin.ViewModels
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage ="Enter Email")]
         [EmailAddress]
         [MaxLength(50)]
         public string Email { get; set; }
@@ -24,7 +24,7 @@ namespace ReJoin.ViewModels
         public string Fullname { get; set; }
 
 
-        [Required]
+        [Required(ErrorMessage = "Enter Password")]
         [MaxLength(50)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
@@ -33,15 +33,16 @@ namespace ReJoin.ViewModels
     public class LogingInViewModel
     {
 
-        [Required]
+        [Required(ErrorMessage = "Entered Email ")]
         [EmailAddress]
         [MaxLength(50)]
         public string Email { get; set; }
 
 
-        [Required]
+        [Required(ErrorMessage = "Entered Password ")]
         [MaxLength(50)]
         [DataType(DataType.Password)]
+        [Display(Name ="Password")]
         public string Password { get; set; }
 
         public bool RememberMe { get; set; }

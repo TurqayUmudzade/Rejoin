@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 /**
 * jobslist Version:V.1
@@ -113,6 +113,14 @@
   --breakpoint-xl: 1280px;
   --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   --font-family-monospace: Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+.field-validation-error {
+	color:red !important;
+}
+
+field-validation-valid {
+	color: red !important;
 }
 
 *, ::after, ::before {

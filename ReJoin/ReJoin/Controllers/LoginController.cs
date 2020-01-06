@@ -7,6 +7,7 @@ using ReJoin.Models;
 using ReJoin.Data;
 using ReJoin.ViewModels;
 using System.Web.Helpers;
+using System.Web.Security;
 
 
 namespace ReJoin.Controllers
@@ -87,16 +88,16 @@ namespace ReJoin.Controllers
                         {
                             Value=user.Token,
                             HttpOnly=true
+                            
                         };
 
                         tokenCookie.Expires = DateTime.Now.AddDays(10);
-
+                        
                         Response.Cookies.Add(tokenCookie);
-
-                        return RedirectToAction("index","Home");
+                        return RedirectToAction("index","UserProfile",user);
                     }
                 }
-                ModelState.AddModelError("","Wrong Email or Password");
+                ModelState.AddModelError("CustomError", "Wrong Email or Password");
             }
 
             LoginViewModel model1 = new LoginViewModel
@@ -104,7 +105,7 @@ namespace ReJoin.Controllers
                 Login = Login
             };
 
-            return View("~/Views/Home/Index.cshtml", model1);
+            return View("~/Views/Login/Index.cshtml", model1);
         }
 
        // [Auth]
@@ -120,6 +121,7 @@ namespace ReJoin.Controllers
 
 
             Response.Cookies.Add(new HttpCookie("token") { Value = "", Expires = DateTime.Now.AddDays(-1) });
+            FormsAuthentication.SignOut();
 
             return RedirectToAction("index");
         }
