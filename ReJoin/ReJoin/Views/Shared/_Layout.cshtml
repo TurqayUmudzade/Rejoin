@@ -386,7 +386,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="" data-toggle="dropdown"><i class="fa fa-home mr-1"></i><span> My Dashboard</span></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a href="mydash.html" class="dropdown-item">
+                                        <a href="@Url.Action("Index", "UserProfile")" class="dropdown-item">
                                             <i class="dropdown-icon icon icon-user"></i> My Profile
                                         </a>
                                         <a class="dropdown-item" href="#">
@@ -395,7 +395,8 @@
                                         <a class="dropdown-item" href="#">
                                             <i class="dropdown-icon icon icon-bell"></i> Notifications
                                         </a>
-                                        <a href="mydash.html" class="dropdown-item">
+
+                                        <a  href="@Url.Action("Index", "UserProfile")" class="dropdown-item">
                                             <i class="dropdown-icon  icon icon-settings"></i> Account Settings
                                         </a>
                                         <a class="dropdown-item" href="#">
@@ -603,7 +604,7 @@
                             <a href="#">My Dashboard <span class="fa fa-caret-down m-0"></span></a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="mydash.html">My Dashboard</a>
+                                    <a @Html.ActionLink("U", "Index", "UserProfile")>My Dashboard</a>
                                 </li>
                                 <li>
                                     <a href="myjobs.html">My Jobs</a>
