@@ -136,6 +136,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\FileManager.cs" />
     <Compile Include="Migrations\202001051545427_contact.cs" />
     <Compile Include="Migrations\202001051545427_contact.Designer.cs">
       <DependentUpon>202001051545427_contact.cs</DependentUpon>
@@ -163,6 +164,10 @@
     <Compile Include="Migrations\202001070157293_salarychanged.cs" />
     <Compile Include="Migrations\202001070157293_salarychanged.Designer.cs">
       <DependentUpon>202001070157293_salarychanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001072001187_UserPicture.cs" />
+    <Compile Include="Migrations\202001072001187_UserPicture.Designer.cs">
+      <DependentUpon>202001072001187_UserPicture.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContactInfo.cs" />
@@ -621,6 +626,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Public\uploads\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -654,6 +660,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001070157293_salarychanged.resx">
       <DependentUpon>202001070157293_salarychanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001072001187_UserPicture.resx">
+      <DependentUpon>202001072001187_UserPicture.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

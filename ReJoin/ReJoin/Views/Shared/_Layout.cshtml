@@ -604,7 +604,7 @@
                             <a href="#">My Dashboard <span class="fa fa-caret-down m-0"></span></a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a @Html.ActionLink("U", "Index", "UserProfile")>My Dashboard</a>
+                                    <a href="@Url.Action("Index", "UserProfile")">My Dashboard</a>
                                 </li>
                                 <li>
                                     <a href="myjobs.html">My Jobs</a>
@@ -631,7 +631,7 @@
                         </li>
                         <li><a @Html.ActionLink("Contact", "Index", "Contact")> Contact Us <span class="horizontal-arrow"></span></a></li>
                         <li class="d-lg-none mt-5 pb-2 mt-lg-0">
-                            <span><a class="btn btn-secondary ad-post mt-1" href="ad-posts.html"><i class="fa fa-briefcase"></i> Submit a Job</a></span>
+                           //here
                         </li>
                         <li class="d-lg-none mt-0 pb-5 mt-lg-0">
                             <span><a class="btn btn-info ad-post mt-1" href="create-resume.html"><i class="fa fa-edit"></i> Create Resume</a></span>
@@ -639,7 +639,7 @@
                     </ul>
                     <ul class="mb-0 pr-2">
                         <li class="d-none d-lg-flex">
-                            <span><a class="btn btn-secondary ad-post mt-1" href="ad-posts.html"><i class="fa fa-briefcase"></i> Submit a Job</a></span>
+                            <span><a  href="@Url.Action("Index","AdPost")"  class="btn btn-secondary ad-post mt-1" ><i class="fa fa-briefcase"></i> Submit a Job</a></span>
                         </li>
                     </ul>
                     <ul class="mb-0 pl-2 create-resume-btn">

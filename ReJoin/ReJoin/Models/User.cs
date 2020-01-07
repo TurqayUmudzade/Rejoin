@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ReJoin.Models
 {
@@ -47,5 +48,19 @@ namespace ReJoin.Models
 
         public string picture { get; set; }
 
+        [MaxLength(50)]
+        public string FacebookLink { get; set; }
+
+        [MaxLength(50)]
+        public string TwitterLink { get; set; }
+
+        [MaxLength(50)]
+        public string GoogleLink { get; set; }
+
+        [MaxLength(50)]
+        public string PinteresLink { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase Upload { get; set; }
     }
 }
