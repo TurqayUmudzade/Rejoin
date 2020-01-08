@@ -89,3 +89,4 @@ C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.userup
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.jobs.resources
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.salarychanged.resources
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.UserPicture.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.resume.resources

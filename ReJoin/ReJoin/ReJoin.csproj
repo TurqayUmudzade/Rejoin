@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdPostController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CreateResumeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UserProfileController.cs" />
@@ -169,10 +170,17 @@
     <Compile Include="Migrations\202001072001187_UserPicture.Designer.cs">
       <DependentUpon>202001072001187_UserPicture.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001080037067_resume.cs" />
+    <Compile Include="Migrations\202001080037067_resume.Designer.cs">
+      <DependentUpon>202001080037067_resume.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContactInfo.cs" />
+    <Compile Include="Models\Education.cs" />
     <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\Resume.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\WorkExprience.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
@@ -623,6 +631,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\UserProfile\Index.cshtml" />
     <Content Include="Views\AdPost\Index.cshtml" />
+    <Content Include="Views\CreateResume\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -663,6 +672,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001072001187_UserPicture.resx">
       <DependentUpon>202001072001187_UserPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001080037067_resume.resx">
+      <DependentUpon>202001080037067_resume.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

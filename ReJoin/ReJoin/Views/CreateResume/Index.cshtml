@@ -1,0 +1,547 @@
+﻿@model Resume
+
+<!--Sliders Section-->
+<section>
+    <div class="bannerimg cover-image bg-background3" data-image-src="../assets/images/banners/banner2.jpg">
+        <div class="header-text mb-0">
+            <div class="container">
+                <div class="text-center text-white">
+                    <h1>Create Resume</h1>
+                    <ol class="breadcrumb text-center">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Create Resume</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Sliders Section-->
+<!--Job posts-section-->
+<section class="sptb">
+    <div class="container">
+        <div class="row ">
+            <form method="post" action="@Url.Action("Create")" class="col-lg-8 col-md-12 col-md-12">
+
+                <div class="card dropify-image-avatar">
+                    <div class="card-header ">
+                        <h3 class="card-title">Personal Data</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3 mb-4 mb-lg-0">
+                                <input type="file" class="dropify" data-default-file="~Public/assets/images/users/avatar.png" data-height="180" />
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label text-dark">Name</label>
+
+                                            @Html.EditorFor(m => m.Fullname, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Full Name" } })
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label text-dark">Job Profession</label>
+                                            <input type="text" class="form-control" placeholder="Job Profession">
+                                        </div>
+                                        <div class="form-group mb-md-0">
+                                            <label class="form-label text-dark">Email</label>
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label text-dark">Last Name</label>
+                                            <input type="text" class="form-control" placeholder="last Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label text-dark">Experience</label>
+                                            <div class="row gutters-xs">
+                                                <div class="col-6">
+                                                    <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                                        <option value="0">Year</option>
+                                                        <option value="1">0</option>
+                                                        <option value="2">1</option>
+                                                        <option value="3">2</option>
+                                                        <option value="4">3</option>
+                                                        <option value="5">4</option>
+                                                        <option value="6">5</option>
+                                                        <option value="7">6</option>
+                                                        <option value="8">7</option>
+                                                        <option value="9">8</option>
+                                                        <option value="10">9</option>
+                                                        <option value="11">10</option>
+                                                        <option value="12">11</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                                        <option value="0">Month</option>
+                                                        <option value="1">0</option>
+                                                        <option value="2">1</option>
+                                                        <option value="3">2</option>
+                                                        <option value="4">3</option>
+                                                        <option value="5">4</option>
+                                                        <option value="6">5</option>
+                                                        <option value="7">6</option>
+                                                        <option value="8">7</option>
+                                                        <option value="9">8</option>
+                                                        <option value="10">9</option>
+                                                        <option value="11">10</option>
+                                                        <option value="12">11</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <label class="form-label text-dark">Phone Number</label>
+                                            <input type="text" class="form-control" placeholder="Your Number">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header ">
+                        <h3 class="card-title">Education</h3>
+                        <div class="card-options">
+                            <a class="btn btn-light btn-sm" href="#"><i class="fa fa-plus"></i> Add Another</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label text-dark">School Name</label>
+                            <input type="text" class="form-control" placeholder="School Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-dark">Qualification</label>
+                            <input type="text" class="form-control" placeholder="Qualification">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-dark">Period</label>
+                            <div class="row gutters-xs">
+                                <div class="col-6">
+                                    <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                        <option value="0">Since</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1999">1999</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1990">1990</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                        <option value="0">Untill</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1999">1999</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1990">1990</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-dark">Board</label>
+                            <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                <option value="0">University</option>
+                                <option value="0">Mitchel Knights University</option>
+                                <option value="0">Stephaine Dear University</option>
+                                <option value="0">Jasmin Garay University</option>
+                                <option value="0">Janetta Leister University</option>
+                                <option value="0">Alethia Barberio University</option>
+                                <option value="0">Basil Bard University</option>
+                                <option value="0">Ella Boeke University</option>
+                                <option value="0">Setsuko Speece University</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header ">
+                        <h3 class="card-title">Working Experience</h3>
+                        <div class="card-options">
+                            <a class="btn btn-light btn-sm" href="#"><i class="fa fa-plus"></i> Add Another</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label text-dark">Company Name</label>
+                            <input type="text" class="form-control" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-dark">Position</label>
+                            <input type="text" class="form-control" placeholder="Position">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-dark">Period</label>
+                            <div class="row gutters-xs">
+                                <div class="col-6">
+                                    <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                        <option value="0">Since</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1999">1999</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1990">1990</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                        <option value="0">Untill</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1999">1999</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1990">1990</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header ">
+                        <h3 class="card-title">Professional Skills</h3>
+                        <div class="card-options">
+                            <a class="btn btn-light btn-sm" href="#"><i class="fa fa-plus"></i> Add Another</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label">Professional Skills</label>
+                            <select class="form-control select2-no-search" data-placeholder="Choose Browser" multiple>
+                                <option value="Java">Java</option>
+                                <option value="C">C</option>
+                                <option value="C++">C++</option>
+                                <option value="Core Java">Core Java</option>
+                                <option value="Advanced Java">Advanced Java</option>
+                                <option value="Bootstrap">Bootstrap</option>
+                                <option value="HTML" selected>HTML</option>
+                                <option value="CSS">CSS</option>
+                                <option value="Jquery">Jquery</option>
+                                <option value="Angular">Angular</option>
+                                <option value=".net">.net</option>
+                                <option value="php">php</option>
+                                <option value="phython">phython</option>
+                                <option value="React js">React js</option>
+                                <option value="Wordpress">Wordpress</option>
+                                <option value="Angular js">Angular js</option>
+                                <option value="Sap">Sap</option>
+                                <option value="Java Script">Java Script</option>
+                                <option value="HTML 5">HTML 5</option>
+                                <option value="CSS 3">CSS 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header ">
+                        <h3 class="card-title">Personal Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label">Write Personal Skills <span class="form-label-small">56/100</span></label>
+                            <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="text here.."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="float-right mb-4 mb-lg-0">
+                    <button type="submit" class="btn btn-success w-150" href="#">Finish</button>
+                </div>
+
+            </form>
+            <div class="card">
+                <div class="card-header ">
+                    <h3 class="card-title">Upload Resume</h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-group mb-0 resume-upload">
+                        <form class="d-flex">
+                            <input type="file" id="file-upload" multiple />
+                            <label for="file-upload" class="file-upload mb-0">Upload Resume</label>
+                            <div id="file-upload-filename"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Terms And Conditions</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled widget-spec  mb-0">
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Money Not Refundable
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>You can renew your Premium ad after experted.
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads are active for depend on package.
+                            </li>
+                            <li class="ml-5 mb-0">
+                                <a href="tips.html"> View more..</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Benefits Of Premium Ad</h3>
+                    </div>
+                    <div class="card-body pb-2">
+                        <ul class="list-unstyled widget-spec vertical-scroll mb-0">
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium Ads Active
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads are displayed on top
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads will be Show in Google results
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium Ads Active
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads are displayed on top
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads will be Show in Google results
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium Ads Active
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads are displayed on top
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads will be Show in Google results
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium Ads Active
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads are displayed on top
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads will be Show in Google results
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium Ads Active
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads are displayed on top
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>Premium ads will be Show in Google results
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-header">
+                        <h3 class="card-title">Safety Tips For Buyers</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled widget-spec  mb-0">
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i> Meet Seller at public Place
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i> Check item before you buy
+                            </li>
+                            <li>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i> Pay only after collecting item
+                            </li>
+                            <li class="ml-5 mb-0">
+                                <a href="tips.html"> View more..</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Job posts-section-->
+<!--Blogs-->
+<section class="sptb bg-white">
+    <div class="container">
+        <div class="section-title center-block text-center">
+            <h2>How It Works?</h2>
+            <p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="">
+                    <div class="mb-lg-0 mb-4">
+                        <div class="service-card text-center">
+                            <div class="bg-light icon-bg  icon-service text-purple">
+                                <img src="https://www.spruko.com/demo/rejoin/assets/images/svgs/jobs/find.svg" alt="img">
+                            </div>
+                            <div class="servic-data mt-3">
+                                <h4 class="font-weight-semibold mb-2">Find Candidates</h4>
+                                <p class="text-muted mb-0">Nam libero tempore, cum soluta nobis est eligendi cumque facere possimus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="">
+                    <div class="mb-lg-0 mb-4">
+                        <div class="service-card text-center">
+                            <div class="bg-light icon-bg icon-service text-purple">
+                                <img src="https://www.spruko.com/demo/rejoin/assets/images/svgs/jobs/pay.svg" alt="img">
+                            </div>
+                            <div class="servic-data mt-3">
+                                <h4 class="font-weight-semibold mb-2">Pay Online</h4>
+                                <p class="text-muted mb-0">Nam libero tempore, cum soluta nobis est eligendi cumque facere possimus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="">
+                    <div class="mb-lg-0 mb-4">
+                        <div class="service-card text-center">
+                            <div class="bg-light icon-bg  icon-service text-purple">
+                                <img src="https://www.spruko.com/demo/rejoin/assets/images/svgs/jobs/hire.svg" alt="img">
+                            </div>
+                            <div class="servic-data mt-3">
+                                <h4 class="font-weight-semibold mb-2">Hire Candidate</h4>
+                                <p class="text-muted mb-0">Nam libero tempore, cum soluta nobis est eligendi cumque facere possimus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="">
+                    <div class="">
+                        <div class="service-card text-center">
+                            <div class="bg-light icon-bg  icon-service text-purple">
+                                <img src="https://www.spruko.com/demo/rejoin/assets/images/svgs/jobs/work.svg" alt="img">
+                            </div>
+                            <div class="servic-data mt-3">
+                                <h4 class="font-weight-semibold mb-2">Work</h4>
+                                <p class="text-muted mb-0">Nam libero tempore, cum soluta nobis est eligendi cumque facere possimus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Blogs-->

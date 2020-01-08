@@ -60,6 +60,8 @@ namespace ReJoin.Models
         [MaxLength(50)]
         public string PinteresLink { get; set; }
 
+        public Resume Resume { get; set; }
+
         [NotMapped]
         public HttpPostedFileBase Upload { get; set; }
     }
