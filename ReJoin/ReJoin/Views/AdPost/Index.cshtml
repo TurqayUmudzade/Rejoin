@@ -1,4 +1,4 @@
-﻿@model Job
+﻿@model JobAd
 
 <!--Sliders Section-->
 <section>
@@ -29,8 +29,11 @@
                     </div>
                     <div class="card-body">
                         <h3 class="card-title mb-3">Job details </h3>
-                        <form method="post" id="myform" action="@Url.Action("submitJob")">
+                        <form method="post" id="myform" action="@Url.Action("submitJob")" enctype="multipart/form-data">
                             <div class="form-group">
+                                <label class="form-label text-dark">Company Logo</label>
+                                <input type="file" class="" name="logoUpload" placeholder=""  accept="image/*">
+
                                 <label class="form-label text-dark">Job Title</label>
                                 <input type="text" class="form-control" name="jobTitle" placeholder="" required>
                             </div>

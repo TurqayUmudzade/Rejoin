@@ -1,0 +1,63 @@
+@model Resume
+
+
+
+<form method="post" action="@Url.Action(" Create ")" class="col-lg-8 col-md-12 col-md-12">
+
+    <div class="card dropify-image-avatar">
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <input type="file" class="dropify" data-default-file="~Public/assets/images/users/avatar.png" data-height="180" />
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label text-dark">Full Name</label> @Html.EditorFor(m => m.Fullname, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Full Name" } })
+
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label text-dark">Job Profession</label> @Html.EditorFor(m => m.JobProfession, new { htmlAttributes = new { @class = "form-control", placeholder = "Job Profession " } })
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addSection(where) {
+            var main = document.getElementById("cardbodyAdd");
+            var cntr = (main.datacntr || 0) + 1;
+            main.datacntr = cntr;
+
+            var clone = main.cloneNode(true);
+            clone.id = "section" + cntr;
+            where.parentNode.insertBefore(clone, where);
+        }
+    </script>
+    <div class="card" id="cardbodyAdd">
+        <div class="card-header">
+            <h3 class="card-title">Education</h3>
+            <div class="card-options">
+
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label class="form-label text-dark">School Name</label>
+                <input type="text" class="form-control" placeholder="School Name">
+            </div>
+            <div class="form-group">
+                <label class="form-label text-dark">Qualification</label>
+                <input type="text" class="form-control" placeholder="Qualification">
+            </div>
+
+        </div>
+    </div>
+    <button onclick="addSection(this)" type="button" class="btn btn-light btn-sm" href="#"><i class="fa fa-plus"></i> Add Another</button>

@@ -62,7 +62,11 @@ namespace ReJoin.Models
 
         public Resume Resume { get; set; }
 
+        public List<JobAd> MyPublishedJobs { get; set; }
+
         [NotMapped]
         public HttpPostedFileBase Upload { get; set; }
+
+        
     }
 }

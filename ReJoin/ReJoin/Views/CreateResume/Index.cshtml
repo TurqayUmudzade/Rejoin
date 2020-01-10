@@ -1,5 +1,5 @@
 ﻿@model Resume
-
+@using System.Data.Entity;
 <!--Sliders Section-->
 <section>
     <div class="bannerimg cover-image bg-background3" data-image-src="../assets/images/banners/banner2.jpg">
@@ -37,30 +37,30 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label text-dark">Name</label>
+                                            <label class="form-label text-dark">Full Name</label>
 
                                             @Html.EditorFor(m => m.Fullname, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Full Name" } })
+                                            
 
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label text-dark">Job Profession</label>
-                                            <input type="text" class="form-control" placeholder="Job Profession">
+
+                                            @Html.EditorFor(m => m.JobProfession, new { htmlAttributes = new { @class = "form-control", placeholder = "Job Profession " } })
                                         </div>
                                         <div class="form-group mb-md-0">
                                             <label class="form-label text-dark">Email</label>
-                                            <input type="email" class="form-control" placeholder="Email">
+
+                                            @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label text-dark">Last Name</label>
-                                            <input type="text" class="form-control" placeholder="last Name">
-                                        </div>
+                                        <div class="form-group"> <label class="form-label invisible text-dark">Last Name</label> <input type="text" class="form-control invisible" placeholder="last Name"> </div>
                                         <div class="form-group">
                                             <label class="form-label text-dark">Experience</label>
                                             <div class="row gutters-xs">
                                                 <div class="col-6">
-                                                    <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                                    <select class="form-control custom-select select2-show-search" name="xpYear" data-placeholder="Choose one (with searchbox)">
                                                         <option value="0">Year</option>
                                                         <option value="1">0</option>
                                                         <option value="2">1</option>
@@ -77,7 +77,7 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-6">
-                                                    <select class="form-control custom-select select2-show-search" data-placeholder="Choose one (with searchbox)">
+                                                    <select class="form-control custom-select select2-show-search" name="xpMonth" data-placeholder="Choose one (with searchbox)">
                                                         <option value="0">Month</option>
                                                         <option value="1">0</option>
                                                         <option value="2">1</option>
@@ -97,7 +97,8 @@
                                         </div>
                                         <div class="form-group mb-0">
                                             <label class="form-label text-dark">Phone Number</label>
-                                            <input type="text" class="form-control" placeholder="Your Number">
+
+                                            @Html.EditorFor(m => m.PhoneNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Number" } })
                                         </div>
                                     </div>
                                 </div>
@@ -105,17 +106,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header ">
+
+                <script>
+                    function addSection(where) {
+                        var main = document.getElementById("cardbodyAdd");
+                        var cntr = (main.datacntr || 0) + 1;
+                        main.datacntr = cntr;
+
+                        var clone = main.cloneNode(true);
+                        clone.id = "section" + cntr;
+                        where.parentNode.insertBefore(clone, where);
+                    }
+                </script>
+                <div class="card" id="cardbodyAdd">
+                    <div class="card-header" >
                         <h3 class="card-title">Education</h3>
                         <div class="card-options">
-                            <a class="btn btn-light btn-sm" href="#"><i class="fa fa-plus"></i> Add Another</a>
+
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="form-group">
                             <label class="form-label text-dark">School Name</label>
                             <input type="text" class="form-control" placeholder="School Name">
+                            
+                            @Html.EditorFor(m => m.Educations.Add(m=>m.SchoolName), new { htmlAttributes = new { @class = "form-control", placeholder = "Your Full Name" } })
                         </div>
                         <div class="form-group">
                             <label class="form-label text-dark">Qualification</label>
@@ -212,6 +227,7 @@
                         </div>
                     </div>
                 </div>
+                <button onclick="addSection(this)" type="button" class="btn btn-light btn-sm" href="#"><i class="fa fa-plus"></i> Add Another</button>
                 <div class="card">
                     <div class="card-header ">
                         <h3 class="card-title">Working Experience</h3>
@@ -315,6 +331,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label class="form-label">Professional Skills</label>
+                            @Html.EditorFor(m => m.PersonalSkill, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Full Name" } })
                             <select class="form-control select2-no-search" data-placeholder="Choose Browser" multiple>
                                 <option value="Java">Java</option>
                                 <option value="C">C</option>

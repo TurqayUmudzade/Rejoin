@@ -1,0 +1,397 @@
+﻿@model JobListViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<!--Sliders Section-->
+<div>
+    <div class="cover-image sptb-1 bg-background" data-image-src="../assets/images/banners/banner1.jpg">
+        <div class="header-text1 mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
+                        <div class="text-center text-white ">
+                            <h1 class="mb-5"><span class="font-weight-bold">16,25,365</span> Jobs Available In Hyderabad</h1>
+                        </div>
+                        <div class="search-background bg-transparent">
+                            <div class="form row no-gutters ">
+                                <div class="form-group  col-xl-4 col-lg-3 col-md-12 mb-0 bg-white ">
+                                    <input type="text" class="form-control input-lg br-tr-md-0 br-br-md-0" id="text4" placeholder="Enter Your Keywords">
+                                </div>
+                                <div class="form-group  col-xl-3 col-lg-3 col-md-12 mb-0 bg-white">
+                                    <input type="text" class="form-control input-lg br-md-0" id="text5" placeholder="Select Location">
+                                    <span><img src="https://www.spruko.com/demo/rejoin/assets/images/svg/gps.svg" class="location-gps"></span>
+                                </div>
+                                <div class="form-group col-xl-3 col-lg-3 col-md-12 select2-lg  mb-0 bg-white">
+                                    <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
+                                        <optgroup label="Categories">
+                                            <option>All Categories</option>
+                                            <option value="1">Accountant</option>
+                                            <option value="2">IT Software</option>
+                                            <option value="3">Banking</option>
+                                            <option value="4">Finaces</option>
+                                            <option value="5">Cook/Chef</option>
+                                            <option value="6">Driveing</option>
+                                            <option value="7">HR Recruiter</option>
+                                            <option value="8">IT Hardware</option>
+                                            <option value="9">Sales</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-12 mb-0">
+                                    <a href="#" class="btn btn-lg btn-block btn-secondary br-tl-md-0 br-bl-md-0">Search Here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /header-text -->
+    </div>
+</div>
+<!--/Sliders Section-->
+<!--Breadcrumb-->
+<div class="bg-white border-bottom">
+    <div class="container">
+        <div class="page-header">
+            <h4 class="page-title">Jobs list</h4>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Jobs list</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--/Breadcrumb-->
+<!--Job listing-->
+<section class="sptb">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-md-12">
+                <!--Job lists-->
+                <div class=" mb-lg-0">
+                    <div class="">
+                        <div class="item2-gl">
+                            <div class=" mb-0">
+                                <div class="">
+                                    <div class="p-5 bg-white item2-gl-nav d-flex">
+                                        <h6 class="mb-0 mt-3">Showing <b>1 to 10</b> of 30 Entries</h6>
+                                        <ul class="nav item2-gl-menu mt-1 ml-auto">
+                                            <li class=""><a href="#tab-11" class="active show" data-toggle="tab" title="List style"><i class="fa fa-list"></i></a></li>
+                                            <li><a href="#tab-12" data-toggle="tab" class="" title="Grid"><i class="fa fa-th"></i></a></li>
+                                        </ul>
+                                        <div class="d-flex">
+                                            <label class="mr-2 mt-2 mb-sm-1">Sort By:</label>
+                                            <select name="item" class="form-control select2-no-search w-70">
+                                                <option value="1">Relavant</option>
+                                                <option value="2">Newest First</option>
+                                                <option value="3">Highest Paid</option>
+                                                <option value="4">Loweest Paid</option>
+                                                <option value="5">High Ratings</option>
+                                                <option value="6">Popular</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab-11">
+
+                                    @foreach (var item in Model.jobAds)
+                                    {
+                                        <div class="card overflow-hidden br-0 overflow-hidden">
+                                            <div class="d-md-flex">
+                                                <div class="p-0 m-0 item-card9-img">
+                                                    <div class="item-card9-imgs">
+                                                        <a href="jobs.html"></a>
+                                                        <img src="~/Public/uploads/@item.picture" alt="img" class="h-100">
+                                                    </div>
+                                                </div>
+                                                <div class="card overflow-hidden  border-0 box-shadow-0 border-left br-0 mb-0">
+                                                    <div class="card-body pt-0 pt-md-5">
+                                                        <div class="item-card9">
+                                                            <a href="jobs.html" class="text-dark"><h4 class="font-weight-semibold mt-1">@item.JobTitle</h4></a>
+                                                            <div class="mt-2 mb-2">
+                                                                <a href="#" class="mr-4"><span><i class="fa fa-building-o text-muted mr-1"></i> @item.CompanyName</span></a>
+                                                                <a href="#" class="mr-4"><span><i class="fa fa-map-marker text-muted mr-1"></i> @item.City</span></a>
+                                                                <a href="#" class="mr-4"><span><i class="fa fa fa-usd text-muted mr-1"></i> @item.SalaryMin - @item.SalaryMax</span></a>
+                                                                <a href="#" class="mr-4"><span><i class="fa fa-clock-o text-muted mr-1"></i> @item.JobType</span></a>
+                                                                <a href="#" class="mr-4"><span><i class="fa fa-briefcase text-muted mr-1"></i> @item.Exprience Year Exp</span></a>
+                                                            </div>
+                                                            <p class="mb-0 leading-tight">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer pt-3 pb-3">
+                                                        <div class="item-card9-footer d-flex">
+                                                            <div class="d-flex align-items-center mb-3 mb-md-0 mt-auto posted">
+                                                                <div>
+                                                                    <a href="profile.html" class="text-muted fs-12 mb-1">Posted by </a><span class="ml-1 fs-13"> Individual</span>
+                                                                    <small class="d-block text-default">@item.CreatedAt</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ml-auto">
+                                                                <a href="jobs.html" class="mr-3"><i class="fa fa-user text-muted mr-1"></i>@item.JobRole</a>
+                                                                <a href="jobs.html" class="mr-3"><i class="fas fa-badge-check"></i>Phone Verified</a>
+                                                                <a href="jobs.html" class="btn btn-primary mt-3 mt-sm-0"> Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="center-block text-center">
+                            <ul class="pagination mb-5 mb-lg-0">
+                                <li class="page-item page-prev disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Prev</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item page-next">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--/Job lists-->
+            </div>
+
+            <!--Right Side Content-->
+            <div class="col-xl-3 col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="input-group" method="post" action="@Url.Action("Search")">
+                            <input type="text" class="form-control br-tl-3 br-bl-3" name="searchstring" placeholder="Search">
+                            <div class="input-group-append ">
+                                <button type="submit" class="btn btn-primary br-tr-3 br-br-3">
+                                    Search
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <form class="card" method="post" action="@Url.Action("Filter")">
+                    <div class="card-header">
+                        <h3 class="card-title">Categories</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="" id="container">
+                            <div class="filter-product-checkboxs">
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox1" value="Computer Operator<">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Computer Operator<span class="label label-secondary float-right">14</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox2" value="Admin">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Admin<span class="label label-secondary float-right">22</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox3" value="Chef">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Chef<span class="label label-secondary float-right">78</span></a>
+                                        
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox4" value="Beautician">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Beautician<span class="label label-secondary float-right">35</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox5" value="IT Hardware">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">IT/Hardware<span class="label label-secondary float-right">23</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox6" value="Driver">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Driver<span class="label label-secondary float-right">14</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox7" value="IT Software">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">IT/Software<span class="label label-secondary float-right">45</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox8" value="HR Recruite">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">HR Recruiter<span class="label label-secondary float-right">34</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Customer Support(BPO)<span class="label label-secondary float-right">12</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox71" value="option3">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Sales<span class="label label-secondary float-right">18</span></a>
+                                        
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Teachers/Lecturers<span class="label label-secondary float-right">02</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Life Insurance<span class="label label-secondary float-right">15</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Delivery Boy<span class="label label-secondary float-right">32</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Web Designer<span class="label label-secondary float-right">23</span></a>
+                                    </span>
+                                </label>
+                                <label class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+                                    <span class="custom-control-label">
+                                        <a href="#" class="text-dark">Web Developer<span class="label label-secondary float-right">19</span></a>
+                                    </span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-header border-top">
+                        <h3 class="card-title">Salary Range</h3>
+                    </div>
+                    <div class="card-body">
+                        <h6>
+                            <label for="price">Salary Range:</label>
+                            <input type="text" id="price" name="priceRange">
+                        </h6>
+                        <div id="mySlider"></div>
+                    </div>
+                    <div class="card-header border-top">
+                        <h3 class="card-title">Job Type</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="filter-product-checkboxs">
+                            <label class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" name="checkbox1" value="option1">
+                                <span class="custom-control-label">
+                                    Part time
+                                </span>
+                            </label>
+                            <label class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+                                <span class="custom-control-label">
+                                    Full time
+                                </span>
+                            </label>
+                            <label class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+                                <span class="custom-control-label">
+                                    Work From Home
+                                </span>
+                            </label>
+                            <label class="custom-control custom-checkbox mb-0">
+                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+                                <span class="custom-control-label">
+                                    Internship
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-header border-top">
+                        <h3 class="card-title">Posted By</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="filter-product-checkboxs">
+                            <label class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" name="checkbox1" value="option1">
+                                <span class="custom-control-label">
+                                    Management
+                                </span>
+                            </label>
+                            <label class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+                                <span class="custom-control-label">
+                                    Individual
+                                </span>
+                            </label>
+                            <label class="custom-control custom-checkbox mb-0">
+                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+                                <span class="custom-control-label">
+                                    HR
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-warning btn-block">Apply Filter</button>
+                    </div>
+                </form>
+                <div class="card mb-0">
+                    <div class="card-header">
+                        <h3 class="card-title">Shares</h3>
+                    </div>
+                    <div class="card-body product-filter-desc">
+                        <div class="product-filter-icons text-center">
+                            <a href="#" class="facebook-bg"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="twitter-bg"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="google-bg"><i class="fab fa-google"></i></a>
+                            <a href="#" class="dribbble-bg"><i class="fab fa-dribbble"></i></a>
+                            <a href="#" class="pinterest-bg"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Right Side Content-->
+        </div>
+    </div>
+</section>
+<!--/Job Listings-->
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-xl-6 col-md-12">
+                <div class="sub-newsletter">
+                    <h3 class="mb-2"><i class="fa fa-paper-plane-o mr-2"></i> Subscribe To Our Onlinesletter</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-xl-6 col-md-12">
+                <div class="input-group sub-input mt-1">
+                    <input type="text" class="form-control input-lg " placeholder="Enter your Email">
+                    <div class="input-group-append ">
+                        <button type="button" class="btn btn-primary btn-lg br-tr-3  br-br-3">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Onlinesletter-->

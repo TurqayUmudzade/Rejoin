@@ -90,3 +90,17 @@ C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.jobs.r
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.salarychanged.resources
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.UserPicture.resources
 C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.resume.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.JobForUser.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.JobForUser1.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.JobForUser2.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.JobForUser22.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.JobForUser221.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.test.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.test1.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.test11.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.j2.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.newjob.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.smth.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.smth2.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.smdsad.resources
+C:\Users\Turqay\Desktop\C#Final\ReJoin\ReJoin\obj\Debug\ReJoin.Migrations.jobadCreatedAT.resources

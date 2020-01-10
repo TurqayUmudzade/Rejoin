@@ -15,7 +15,7 @@ namespace ReJoin.Data
         }
         public DbSet<ContactInfo> contactInfos { get; set; }
         public DbSet<User> users { get; set; }
-        public DbSet<Job> Jobs { get; set; }
+        public DbSet<JobAd> JobsAd { get; set; }
         public DbSet<Resume> resumes { get; set; }
 
         public DbSet<Education> educations { get; set; }

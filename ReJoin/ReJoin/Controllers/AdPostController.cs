@@ -1,10 +1,14 @@
 ﻿using ReJoin.Data;
 using ReJoin.Models;
 using System;
+using System.Web;
 using System.Web.Mvc;
+using ReJoin.Filters;
+using System.IO;
 
 namespace ReJoin.Controllers
 {
+    [Auth]
     public class AdPostController : Controller
     {
 
@@ -19,10 +23,17 @@ namespace ReJoin.Controllers
         {
             return View();
         }
-
-        public ActionResult submitJob()
+        [HttpPost]
+        public ActionResult submitJob(HttpPostedFileBase logoUpload)
         {
-            Job job = new Job
+
+
+
+            User user = ViewBag.User as User;
+            User logedInUser = _context.users.Find(user.UserID);
+
+
+            JobAd job = new JobAd
             {
                 JobTitle = Request.Form.Get("jobTitle"),
                 JobType = Request.Form.Get("jobType"),
@@ -40,16 +51,32 @@ namespace ReJoin.Controllers
                 CompanyName = Request.Form.Get("companyName"),
                 RecruiterEmail = Request.Form.Get("recEmail"),
                 RecruiterPhoneNumber = Request.Form.Get("phoneNumber"),
-                RecruiterAdress = Request.Form.Get("recAdress")
+                RecruiterAdress = Request.Form.Get("recAdress"),
+                PostUserID = logedInUser.UserID,
+                User = logedInUser,
+                CreatedAt = DateTime.Now
+
+
             };
 
 
 
-            _context.Jobs.Add(job);
+            if (logoUpload != null)
+            {
+
+                var fileName = Path.GetFileName(logoUpload.FileName);
+                var path = Path.Combine(Server.MapPath("~/Public/uploads"), fileName);
+                logoUpload.SaveAs(path);
+                job.picture = fileName;
+            }
+
+
+
+            _context.JobsAd.Add(job);
             _context.SaveChanges();
 
-            return RedirectToAction("index", "Home");
-          
+            return RedirectToAction("index", "JobList");
+
         }
     }
 }
