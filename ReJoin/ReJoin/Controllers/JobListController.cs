@@ -41,19 +41,26 @@ namespace ReJoin.Controllers
         }
 
         //SEARCH BUTTON FUNCTION
-        public ActionResult Filter(string checkbox1,string checkbox2, string checkbox3, string checkbox4, string checkbox5, string checkbox6, string checkbox7, string checkbox8, string checkbox9, string priceRange)
+        public ActionResult Filter(string checkbox1,string checkbox2, string checkbox3, string checkbox4, string checkbox5, string checkbox6, string checkbox7, string checkbox8, string checkbox9, string priceRange, string checkbox21, string checkbox22, string checkbox23, string checkbox24,string checkbox31, string checkbox32, string checkbox33)
         {
-
+            int salarymin = 0;
+            int salarymax = 10000000;
             string[] salary = priceRange.Split('-');
 
-            int salarymin = Int32.Parse(salary[1].Trim('$'));
-           
+            if (!string.IsNullOrEmpty(salary[0]))
+            {
+                salarymin = Int32.Parse(salary[0].Trim('$'));
+                 salarymax = Int32.Parse(salary[1].Remove(1));
+            }
+            
+          ;
             //compare the job type with checkboxes
             JobListViewModel jobListViewModel = new JobListViewModel
             {
-               jobAds = _context.JobsAd
-                .Where(job => job.JobRole==checkbox1 || job.JobRole==checkbox2 || job.JobRole == checkbox3 || job.JobRole == checkbox4 || job.JobRole == checkbox5 || job.JobRole == checkbox6 || job.JobRole == checkbox7 || job.JobRole == checkbox8)
-                .Where(job=>job.SalaryMin)
+                jobAds = _context.JobsAd
+                .Where(job => job.JobRole == checkbox1 || job.JobRole == checkbox2 || job.JobRole == checkbox3 || job.JobRole == checkbox4 ||
+                job.JobRole == checkbox5 || job.JobRole == checkbox6 || job.JobRole == checkbox7 || job.JobRole == checkbox8 || job.SalaryMin >= salarymin || job.SalaryMax <= salarymax 
+                || job.JobType == checkbox21 || job.JobType == checkbox22 || job.JobType == checkbox23 || job.JobType == checkbox24)
                 .ToList()
             };
 

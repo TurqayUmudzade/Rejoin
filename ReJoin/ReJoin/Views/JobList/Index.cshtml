@@ -104,14 +104,14 @@
                                             <div class="d-md-flex">
                                                 <div class="p-0 m-0 item-card9-img">
                                                     <div class="item-card9-imgs">
-                                                        <a href="jobs.html"></a>
+                                                        <a href="@Url.Action("Index","JobInfo",item)"></a>
                                                         <img src="~/Public/uploads/@item.picture" alt="img" class="h-100">
                                                     </div>
                                                 </div>
                                                 <div class="card overflow-hidden  border-0 box-shadow-0 border-left br-0 mb-0">
                                                     <div class="card-body pt-0 pt-md-5">
                                                         <div class="item-card9">
-                                                            <a href="jobs.html" class="text-dark"><h4 class="font-weight-semibold mt-1">@item.JobTitle</h4></a>
+                                                            <a href="@Url.Action("Index","JobInfo",new { id=item.JobID})" class="text-dark"><h4 class="font-weight-semibold mt-1">@item.JobTitle</h4></a>
                                                             <div class="mt-2 mb-2">
                                                                 <a href="#" class="mr-4"><span><i class="fa fa-building-o text-muted mr-1"></i> @item.CompanyName</span></a>
                                                                 <a href="#" class="mr-4"><span><i class="fa fa-map-marker text-muted mr-1"></i> @item.City</span></a>
@@ -288,6 +288,7 @@
                         <h6>
                             <label for="price">Salary Range:</label>
                             <input type="text" id="price" name="priceRange">
+
                         </h6>
                         <div id="mySlider"></div>
                     </div>
@@ -297,56 +298,32 @@
                     <div class="card-body">
                         <div class="filter-product-checkboxs">
                             <label class="custom-control custom-checkbox mb-2">
-                                <input type="checkbox" class="custom-control-input" name="checkbox1" value="option1">
+                                <input type="checkbox" class="custom-control-input" name="checkbox21" value="Part Time Jobs">
                                 <span class="custom-control-label">
                                     Part time
                                 </span>
                             </label>
                             <label class="custom-control custom-checkbox mb-2">
-                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+                                <input type="checkbox" class="custom-control-input" name="checkbox22" value="Full Time Jobs">
                                 <span class="custom-control-label">
                                     Full time
                                 </span>
                             </label>
                             <label class="custom-control custom-checkbox mb-2">
-                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+                                <input type="checkbox" class="custom-control-input" name="checkbox23" value="Work From Home">
                                 <span class="custom-control-label">
                                     Work From Home
                                 </span>
                             </label>
                             <label class="custom-control custom-checkbox mb-0">
-                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+                                <input type="checkbox" class="custom-control-input" name="checkbox24" value="Internship">
                                 <span class="custom-control-label">
                                     Internship
                                 </span>
                             </label>
                         </div>
                     </div>
-                    <div class="card-header border-top">
-                        <h3 class="card-title">Posted By</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="filter-product-checkboxs">
-                            <label class="custom-control custom-checkbox mb-2">
-                                <input type="checkbox" class="custom-control-input" name="checkbox1" value="option1">
-                                <span class="custom-control-label">
-                                    Management
-                                </span>
-                            </label>
-                            <label class="custom-control custom-checkbox mb-2">
-                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
-                                <span class="custom-control-label">
-                                    Individual
-                                </span>
-                            </label>
-                            <label class="custom-control custom-checkbox mb-0">
-                                <input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
-                                <span class="custom-control-label">
-                                    HR
-                                </span>
-                            </label>
-                        </div>
-                    </div>
+                    
                     <div class="card-footer">
                         <button type="submit" class="btn btn-warning btn-block">Apply Filter</button>
                     </div>
@@ -394,4 +371,6 @@
         </div>
     </div>
 </section>
+
+<script src="~/Public/assets/plugins/jquery-uislider/jquery-ui.js"></script>
 <!--/Onlinesletter-->

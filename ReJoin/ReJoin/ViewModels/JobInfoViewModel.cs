@@ -6,12 +6,10 @@ using ReJoin.Models;
 
 namespace ReJoin.ViewModels
 {
-    public class JobListViewModel
+    public class JobInfoViewModel
     {
-        public List<JobAd> jobAds { get; set; }
-        
+        public JobAd JobAd { get; set; }
+        public User User { get; set; }
 
     }
-
-   
 }

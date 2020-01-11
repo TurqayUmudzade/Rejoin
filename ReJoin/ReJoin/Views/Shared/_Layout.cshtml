@@ -45,6 +45,8 @@
     <!-- Custom scroll bar css-->
     <link href="~/Public/assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
 
+    <!-- jquery ui RangeSlider -->
+    <link href="~/Public/assets/plugins/jquery-uislider/jquery-ui.css" rel="stylesheet">
     <!-- Switcher css -->
     <link href="~/Public/assets/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" type="text/css" media="all" />
 
@@ -395,7 +397,7 @@
                                             <i class="dropdown-icon icon icon-bell"></i> Notifications
                                         </a>
 
-                                        <a  href="@Url.Action("Index", "UserProfile")" class="dropdown-item">
+                                        <a href="@Url.Action("Index", "UserProfile")" class="dropdown-item">
                                             <i class="dropdown-icon  icon icon-settings"></i> Account Settings
                                         </a>
                                         <a class="dropdown-item" href="#">
@@ -630,7 +632,7 @@
                         </li>
                         <li><a @Html.ActionLink("Contact", "Index", "Contact")> Contact Us <span class="horizontal-arrow"></span></a></li>
                         <li class="d-lg-none mt-5 pb-2 mt-lg-0">
-                           //here
+                            //here
                         </li>
                         <li class="d-lg-none mt-0 pb-5 mt-lg-0">
                             <span><a class="btn btn-info ad-post mt-1" href="@Url.Action("Index","CreateResume")"><i class="fa fa-edit"></i> Create Resume</a></span>
@@ -638,7 +640,7 @@
                     </ul>
                     <ul class="mb-0 pr-2">
                         <li class="d-none d-lg-flex">
-                            <span><a  href="@Url.Action("Index","AdPost")"  class="btn btn-secondary ad-post mt-1" ><i class="fa fa-briefcase"></i> Submit a Job</a></span>
+                            <span><a href="@Url.Action("Index","AdPost")" class="btn btn-secondary ad-post mt-1"><i class="fa fa-briefcase"></i> Submit a Job</a></span>
                         </li>
                     </ul>
                     <ul class="mb-0 pl-2 create-resume-btn">
@@ -788,6 +790,7 @@
     <a href="#top" id="back-to-top"><i class="fa fa-arrow-up"></i></a>
 
     <!-- JQuery js-->
+    
     <script src="~/Public/assets/js/vendors/jquery-3.2.1.min.js"></script>
 
     <!-- Bootstrap js -->
@@ -820,6 +823,8 @@
     <!--JQuery TouchSwipe js-->
     <script src="~/Public/assets/js/jquery.touchSwipe.min.js"></script>
 
+    <script src="~/Public/assets/plugins/jquery-uislider/jquery-ui.js"></script>
+
     <!-- Custom scroll bar Js-->
     <script src="~/Public/assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
 
@@ -836,7 +841,7 @@
     <script src="~/Public/assets/js/scripts2.js"></script>
 
     <!-- Custom Js-->
-    <script src="../assets/js/custom.js"></script>
+    <script src="~/Public/assets/js/custom.js"></script>
 </body>
 
 <!-- Mirrored from www.spruko.com/demo/rejoin/html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 09:32:00 GMT -->
