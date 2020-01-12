@@ -28,6 +28,8 @@ namespace ReJoin.Controllers
 
             return View(jobListViewModel);
         }
+
+       
         //SEARCH BUTTON FUNCTION
         public ActionResult Search(string searchstring)
         {
@@ -50,7 +52,8 @@ namespace ReJoin.Controllers
             if (!string.IsNullOrEmpty(salary[0]))
             {
                 salarymin = Int32.Parse(salary[0].Trim('$'));
-                 salarymax = Int32.Parse(salary[1].Remove(1));
+                
+                 salarymax = Int32.Parse(salary[1].Remove(0,2));
             }
             
           ;
@@ -58,9 +61,10 @@ namespace ReJoin.Controllers
             JobListViewModel jobListViewModel = new JobListViewModel
             {
                 jobAds = _context.JobsAd
-                .Where(job => job.JobRole == checkbox1 || job.JobRole == checkbox2 || job.JobRole == checkbox3 || job.JobRole == checkbox4 ||
-                job.JobRole == checkbox5 || job.JobRole == checkbox6 || job.JobRole == checkbox7 || job.JobRole == checkbox8 || job.SalaryMin >= salarymin || job.SalaryMax <= salarymax 
-                || job.JobType == checkbox21 || job.JobType == checkbox22 || job.JobType == checkbox23 || job.JobType == checkbox24)
+                .Where(job => (job.JobRole == checkbox1 || job.JobRole == checkbox2 || job.JobRole == checkbox3 || job.JobRole == checkbox4 ||
+                job.JobRole == checkbox5 || job.JobRole == checkbox6 || job.JobRole == checkbox7 || job.JobRole == checkbox8  
+                || job.JobType == checkbox21 || job.JobType == checkbox22 || job.JobType == checkbox23 || job.JobType == checkbox24 || true)&& job.SalaryMin >= salarymin && job.SalaryMax <= salarymax)
+                //.Where(job=>job.SalaryMin >= salarymin || job.SalaryMax <= salarymax)
                 .ToList()
             };
 
